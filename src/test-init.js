@@ -29,7 +29,7 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
-    await clients.mongo.close();
+    await clients.mongo.db.close();
     await clients.postgres.end();
 
     await mongod.stop();
